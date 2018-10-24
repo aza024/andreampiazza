@@ -1,0 +1,20 @@
+*{
+    font-family: playfair display;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+}
+
+.personalSection{
+    display: flex;
+}
+.personalBlog{
+    width: 50%;
+    margin: 1em;
+}
+
+.personalPhoto{
+    width: 50%;
+}
+
