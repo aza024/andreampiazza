@@ -8,13 +8,18 @@ body{
 
 .personalSection{
     display: flex;
-}
-.personalBlog{
-    width: 50%;
-    margin: 1em;
+    flex-direction: row;
+    /* align-self: auto; */
 }
 
-.personalPhoto{
-    width: 50%;
+.personalBlog{
+    width: 40%;
+    position: relative;
+}
+
+.AP{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
 }
 
