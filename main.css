@@ -49,8 +49,8 @@ body{
 .init{
     font-size: 2.5em;
     /* padding-left: 1.15em; */
-    margin-top: .5em; 
-    margin-left: .4em;
+    margin-top: .4em; 
+    margin-left: .3em;
     font-weight: bolder;
     color:#333333;
     font-family:'Times New Roman', serif;
@@ -62,21 +62,19 @@ body{
     height:75px;
     border: 2px solid #be8f1f;
     position: relative;
-    margin-right: .8em;
-    margin-top: .8em;
 }
 
-.hdr, .techSkills{
+.hdr{
     text-align: center;
 }
 
-.projects, .resume, .techSkills{
+.projects, .resume{
     width: 100vw;
     height: 100vh;
 }
 
 i{
-    font-size: 2em;
+    font-size: 1.25em;
     color: #be8f1f;
 }
 
@@ -99,11 +97,18 @@ i{
     margin: 2em;
 }
 
+header{
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto  auto;
     padding: 10px;
     text-align: center;
+    margin-left: 5.5em;
   }
   .grid-item {
     padding: 20px;
