@@ -1,9 +1,15 @@
 *{
     font-family: playfair display;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: "Playfair Display", serif;
+}
+
+.about{
+    width: 100vw;
+    height: 100vh;
 }
 
 .personalSection{
@@ -13,13 +19,94 @@ body{
 }
 
 .personalBlog{
-    width: 40%;
+    width: 60%;
     position: relative;
+}
+.personalPhoto{
+    width: 30%;
+    justify-content: center;
 }
 
 .AP{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* border-radius: 60%; */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid black;
+    margin-left: 2em;
 }
 
+.aboutpg1{
+    font-size: 1.25em;
+}
+.socialMedia{
+    display: flex;
+    justify-content: space-between;
+}
+
+.init{
+    font-size: 2.5em;
+    /* padding-left: 1.15em; */
+    margin-top: .5em; 
+    margin-left: .4em;
+    font-weight: bolder;
+    color:#333333;
+    font-family:'Times New Roman', serif;
+    position: absolute;
+}
+
+.object{
+    width:75px;
+    height:75px;
+    border: 2px solid #be8f1f;
+    position: relative;
+    margin-right: .8em;
+    margin-top: .8em;
+}
+
+.hdr, .techSkills{
+    text-align: center;
+}
+
+.projects, .resume, .techSkills{
+    width: 100vw;
+    height: 100vh;
+}
+
+i{
+    font-size: 2em;
+    color: #be8f1f;
+}
+
+#resBtn{
+    color: white;
+    background-color: black;
+    padding: 1em;
+    margin-left: 6em;
+    font-size: 1em;
+}
+#resBtn:hover{
+    background-color: #333333;
+}
+
+.hdrsec{
+    display: flex;
+}
+
+.nav{
+    margin: 2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto  auto;
+    padding: 10px;
+    text-align: center;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
