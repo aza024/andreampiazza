@@ -3,6 +3,15 @@
     scroll-behavior: smooth;
 }
 
+#name{
+    border: 3px solid black;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding: 10px;
+    align-content: auto;
+    /* justify-content: space-around; */
+}
 body{
     font-family: "Playfair Display", serif;
 }
@@ -46,23 +55,7 @@ body{
     justify-content: space-between;
 }
 
-.init{
-    font-size: 2.5em;
-    /* padding-left: 1.15em; */
-    margin-top: .4em; 
-    margin-left: .3em;
-    font-weight: bolder;
-    color:#333333;
-    font-family:'Times New Roman', serif;
-    position: absolute;
-}
 
-.object{
-    width:75px;
-    height:75px;
-    border: 2px solid #be8f1f;
-    position: relative;
-}
 
 .hdr{
     text-align: center;
@@ -91,16 +84,22 @@ i{
 
 .hdrsec{
     display: flex;
+    justify-content: center;
 }
 
 .nav{
     margin: 2em;
 }
 
+.navLink{
+    display: flex;
+}
 header{
     margin-left: 2em;
     margin-top: 1em;
     margin-bottom: .5em;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .grid-container {
