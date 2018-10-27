@@ -20,7 +20,7 @@ body{
 
 .personalBlog{
     width: 60%;
-    position: relative;
+    /* position: relative; */
 }
 .personalPhoto{
     width: 30%;
@@ -68,7 +68,7 @@ body{
     text-align: center;
 }
 
-.projects, .resume{
+.projects{
     width: 100vw;
     height: 100vh;
 }
@@ -114,4 +114,61 @@ header{
     padding: 20px;
     font-size: 25px;
     text-align: center;
+  }
+
+  .projects{
+      display:flex;
+  }
+  .project3{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .fileShare{
+      width: 600px;
+      height: 350px;
+  }
+  .p3txt{
+      color:white;
+      background-color: #333333;
+      text-align: center;
+      font-size: 2em;
+  }
+  .html{
+      border-bottom: 15px solid red !important;
+      width: 50px;
+      padding-left: .5em;
+      border: 1px solid grey;
+  }
+
+  @media (max-width:1150px) and (min-width:950px) {
+    .AP{
+        width: 250px;
+        height: 250px;
+    }
+  }
+
+  @media (max-width:950px) and (min-width:780px) {
+    .AP{
+        width: 200px;
+        height: 200px;
+    }
+  }
+
+  @media screen and (max-width:780px) {
+    .personalSection{
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+    }
+    .personalBlog{
+        width: 85%;
+        text-align: center;
+        /* position: relative; */
+    }
+    .hello{
+        font-size: 1.75em;
+    }
+    
   }
