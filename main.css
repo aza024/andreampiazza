@@ -4,6 +4,9 @@
     background-color: #FFFFFF;
     line-height:  1.618;
 }
+p{
+    font-size:1em;
+}
 
 .bold{
     font-weight: bolder;
@@ -51,6 +54,7 @@ body{
 .contact{
     background-color: #F3EFEA;
     border: 5px solid #333333;
+    margin-left: 2em;
 }
 .AP{
     background-position: 50% 50%;
@@ -64,6 +68,13 @@ body{
     opacity: .9;
 }
 
+.carousel-indicators{
+    visibility: hidden;
+}
+.glyphicon-chevron-right:before,
+.glyphicon-chevron-left:before{
+    background-color:grey;
+}
 .aboutpg1{
     font-size: 1em;
 }
@@ -129,6 +140,7 @@ i{
     justify-content: center;
 }
 
+
 #project3{
     display: flex;
     justify-content: center;
@@ -142,6 +154,7 @@ i{
     letter-spacing: 8px;
     padding: 0 10px 0 10px;
     background-color: #F3EFEA;
+    /* margin-top: 100px;    */
 }
 .nav{
     margin: 2em;
@@ -157,7 +170,7 @@ i{
     object-fit: cover;
     z-index: 0;
     margin-top: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .grid-container, .btn-cont {
@@ -200,6 +213,11 @@ i{
     border: 1px solid grey;
 }
 
+.carouselContainer{
+    max-width: 50%;
+    height: auto;
+    vertical-align: middle;
+}
 /* -------------------------- */
 /* ------MEDIA QUERIES--------*/
 /* -------------------------- */
