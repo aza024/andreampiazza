@@ -17,9 +17,6 @@
     margin-bottom: 0;
     position: absolute;
     z-index: 1;
-    background-color: #F3EFEA;
-    /* align-content: auto; */
-    /* justify-content: space-around; */
 }
 body{
     font-family: "Playfair Display", serif;
@@ -73,9 +70,14 @@ body{
 
 .projects{
     display: flex;
+    /* justify-content: center; */
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+}
+
+.projDesc{
+    width: 80vh;
 }
 
 i{
@@ -87,17 +89,17 @@ i{
 
 #resBtn{
     color: white;
-    background-color: #333333;
+    background-color: black;
     padding: .65em;
     margin-bottom: 1em;
     font-size: .75em;
 }
 #resBtn:hover{
-    background-color: #333366;
+    background-color: #333333;
 }
 
 i:hover{
-    color: #333333;
+    color: black;
     
 }
 
@@ -109,10 +111,16 @@ i:hover, #resBtn:hover{
     justify-content: center;
     z-index: 10;
 }
-.pjt{
+.pjt, #fileshare{
     display: flex;
     justify-content: center;
 }
+
+#project3{
+    display: flex;
+    justify-content: center;
+}
+
 #hdr{
     /* text-align: center; */
     border: 5px solid #333366;
@@ -142,71 +150,67 @@ i:hover, #resBtn:hover{
 .grid-container, .btn-cont {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .grid-item, .btn-item {
+}
+.grid-item, .btn-item {
     padding-top: 10px;
     background-color: #F3EFEA;
     /* font-size: 25px; */
     /* text-align: center; */
-  }
+}
 
-  #GHRight, #resRight{
+#GHRight, #resRight{
     text-align: right;
     padding-right: 15px;
-  }
-  #GHRight{
-      padding-right: 28px;
-  }
-  #IN{
-      padding-left: 15px;
-  }
+}
+#GHRight{
+    padding-right: 28px;
+}
+#IN{
+    padding-left: 15px;
+}
 
-  .projects{
-      display:flex;
-  }
-  /* .project3{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-  } */
-  .fileShare{
-      width: 600px;
-      height: 350px;
-  }
-  .p3txt{
-      color:white;
-      background-color: #333333;
-      text-align: center;
-      font-size: 2em;
-  }
-  .html{
-      border-bottom: 15px solid #F3EFEA !important;
-      width: 50px;
-      padding-left: .5em;
-      border: 1px solid grey;
-  }
+.fileShare{
+    width: 600px;
+    height: 350px;
+}
+#fileshare{
+    color:white;
+    background-color: #333333;
+    /* text-align: center; */
+    font-size: 2em;
+    /* width: 50%;  */
+}
+.html{
+    border-bottom: 15px solid #F3EFEA !important;
+    width: 50px;
+    padding-left: .5em;
+    border: 1px solid grey;
+}
 
-  @media (max-width:1150px) and (min-width:950px) {
+/* -------------------------- */
+/* ------MEDIA QUERIES--------*/
+/* -------------------------- */
+
+@media (max-width:1150px) and (min-width:950px) {
     .AP{
         width: 250px;
         height: 250px;
     }
-  }
+}
 
-  @media (max-width:950px) and (min-width:780px) {
+@media (max-width:950px) and (min-width:780px) {
     .AP{
         width: 200px;
         height: 200px;
     }
-  }
+}
 
-  @media screen and (max-width:780px) {
+@media screen and (max-width:780px) {
     .personalSection{
         /* display: flex; */
         flex-direction: column;
         /* text-align: center; */
     }
-  
     .contact{
         width: 70vw;
     }
@@ -230,4 +234,4 @@ i:hover, #resBtn:hover{
         font-size: 1.5em;
     }
     
-  }
+}
