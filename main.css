@@ -2,6 +2,7 @@
     font-family: playfair display;
     scroll-behavior: smooth;
     background-color: #FFFFFF;
+    
 }
 
 #name{
@@ -33,14 +34,12 @@ body{
 
 .personalBlog{
     width: 70%;
+    margin-left: 3em;
     /* position: relative; */
 }
 .personalPhoto{
-    width: 23%;
     justify-content: center;
     background-color: #F3EFEA;
-    /* display: flex; */
-    /* border: 5px solid black; */
 }
 .contact{
     background-color: #F3EFEA;
@@ -54,7 +53,7 @@ body{
     height: 250px;
     object-fit: cover;
     /* border: 4px solid #be8f1f; */
-    /* margin-left: 2em; */
+    margin: .5em 1em 0 1em;
     opacity: .9;
 }
 
@@ -63,7 +62,8 @@ body{
 }
 .socialMedia{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content:center;
 }
 
 .projects{
@@ -72,22 +72,31 @@ body{
 }
 
 i{
-    font-size: 1.5em;
+    font-size: 2em;
     padding-top: .3em;
     background-color: #F3EFEA;
-    /* color: #be8f1f; */
+    color: #333333;
 }
 
 #resBtn{
     color: white;
     background-color: black;
-    padding: 1em;
+    padding: .65em;
+    margin-bottom: 1em;
     font-size: .75em;
 }
 #resBtn:hover{
     background-color: #333333;
 }
 
+i:hover{
+    color: black;
+    
+}
+
+i:hover, #resBtn:hover{
+    transform: scale(1.1);
+}
 .hdrsec{
     display: flex;
     justify-content: center;
@@ -118,18 +127,29 @@ i{
     object-fit: cover;
     z-index: 0;
     margin-top: 70px;
+    margin-bottom: 20px;
 }
 
-.grid-container {
+.grid-container, .btn-cont {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    /* text-align: center; */
+    grid-template-columns: 1fr 1fr;
   }
-  .grid-item {
+  .grid-item, .btn-item {
     padding-top: 10px;
     background-color: #F3EFEA;
     /* font-size: 25px; */
-    text-align: center;
+    /* text-align: center; */
+  }
+
+  #GHRight, #resRight{
+    text-align: right;
+    padding-right: 15px;
+  }
+  #GHRight{
+      padding-right: 28px;
+  }
+  #IN{
+      padding-left: 15px;
   }
 
   .projects{
@@ -180,7 +200,7 @@ i{
     }
     .personalBlog{
         width: 85%;
-        text-align: center;
+        /* text-align: center; */
         /* position: relative; */
     }
     .hello{
