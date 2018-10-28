@@ -4,9 +4,11 @@
     background-color: #FFFFFF;
     
 }
-
+.hello{
+    color: #333366;
+}
 #name{
-    border: 5px solid black;
+    border: 5px solid #333366;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -14,6 +16,7 @@
     margin-bottom: 0;
     position: absolute;
     z-index: 1;
+    background-color: #F3EFEA;
     /* align-content: auto; */
     /* justify-content: space-around; */
 }
@@ -43,7 +46,7 @@ body{
 }
 .contact{
     background-color: #F3EFEA;
-    border: 5px solid black;
+    border: 5px solid #333333;
 }
 .AP{
     background-position: 50% 50%;
@@ -64,6 +67,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:center;
+    background-color: #F3EFEA;
 }
 
 .projects{
@@ -75,22 +79,22 @@ i{
     font-size: 2em;
     padding-top: .3em;
     background-color: #F3EFEA;
-    color: #333333;
+    color: #333366;
 }
 
 #resBtn{
     color: white;
-    background-color: black;
+    background-color: #333333;
     padding: .65em;
     margin-bottom: 1em;
     font-size: .75em;
 }
 #resBtn:hover{
-    background-color: #333333;
+    background-color: #333366;
 }
 
 i:hover{
-    color: black;
+    color: #333333;
     
 }
 
@@ -108,10 +112,12 @@ i:hover, #resBtn:hover{
 }
 #hdr{
     /* text-align: center; */
-    border: 5px solid black;
+    border: 5px solid #333366;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 8px;
+    padding: 5px;
+    background-color: #F3EFEA;
 }
 .nav{
     margin: 2em;
@@ -155,12 +161,11 @@ i:hover, #resBtn:hover{
   .projects{
       display:flex;
   }
-  .project3{
-    width: 50%;
+  /* .project3{
     display: flex;
     flex-direction: column;
     align-self: center;
-  }
+  } */
   .fileShare{
       width: 600px;
       height: 350px;
@@ -194,17 +199,31 @@ i:hover, #resBtn:hover{
 
   @media screen and (max-width:780px) {
     .personalSection{
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         /* text-align: center; */
     }
+  
+    .contact{
+        width: 70vw;
+    }
     .personalBlog{
         width: 85%;
+        margin: 0;
         /* text-align: center; */
         /* position: relative; */
     }
     .hello{
         font-size: 1.75em;
+    }
+
+    .fileShare{
+        width:350px;
+        height: 200px;
+    }
+    #name{
+        margin-top: .5em;
+        font-size: 1.5em;
     }
     
   }
