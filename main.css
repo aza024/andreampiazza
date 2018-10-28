@@ -1,11 +1,37 @@
+/* ------------------------------- */
+/* --------GLOBAL STYLES---------- */
+/* ------------------------------- */
+p{font-size:1em;}
+body{font-family: "Playfair Display", serif;}
+
 *{
     font-family: playfair display;
     scroll-behavior: smooth;
     background-color: #FFFFFF;
     line-height:  1.618;
 }
-p{
-    font-size:1em;
+
+
+i{
+    font-size: 2em;
+    padding-top: .3em;
+    background-color: #F3EFEA;
+    color: #333366;
+}
+
+
+/* ------------------------------- */
+/* ---------- .CLASSES ------------ */
+/* ------------------------------- */
+.about{width: 100vw;}
+.carousel-indicators{visibility: hidden;}
+.aboutpg1{font-size: 1em;}
+.nav{margin: 2em;}
+.navLink{display: flex;}
+.hdrsec{z-index: 10;}
+.glyphicon-chevron-right:before,
+.glyphicon-chevron-left:before{
+    background-color:grey;
 }
 
 .bold{
@@ -17,6 +43,101 @@ p{
     color: #333366;
     margin: 0;
 }
+
+.html{
+    border-bottom: 15px solid #F3EFEA !important;
+    width: 50px;
+    padding-left: .5em;
+    border: 1px solid grey;
+}
+
+.personalSection{
+    display: flex;
+    flex-direction: row;
+}
+
+.personalBlog{
+    width: 70%;
+    margin-left: 3em;
+}
+
+.personalPhoto{
+    justify-content: center;
+    background-color: #F3EFEA;
+}
+.contact{
+    background-color: #F3EFEA;
+    border: 5px solid #333333;
+    margin-left: 2em;
+}
+
+.AP{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 60%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: .5em 1em 0 1em;
+    opacity: .9;
+}
+
+.socialMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: #F3EFEA;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: max-content;
+}
+
+.projDesc{
+    width: 70vh;
+    margin: 1em;
+}
+.bannerImg{
+    width: 100vw;
+    height: 35vh;
+    object-fit: cover;
+    z-index: 0;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+    
+.grid-container, .btn-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+.grid-item, .btn-item {
+    padding-top: 10px;
+    background-color: #F3EFEA;
+}
+.carouselContainer{
+    max-width: 50%;
+    height: auto;
+    vertical-align: middle;
+    margin: 1em;
+}
+
+.pjt, .learnMore, .hdrsec{
+    display: flex;
+    justify-content: center;
+}
+/* ------------------------------- */
+/* ------------- #IDS ------------ */
+/* ------------------------------- */
+#resBtn:hover{background-color: #333333;}
+#GH:hover, #IN:hover, #p3GH:hover{color: black;}
+#GH:hover, #IN:hover, #resBtn:hover, #p3GH:hover{transform: scale(1.1);}
+#p3GH{background-color:white;} 
+#GHRight{padding-right: 28px;}
+#IN{padding-left: 15px;}
+
 #name{
     border: 5px solid #333366;
     font-family: 'Open Sans', sans-serif;
@@ -27,90 +148,6 @@ p{
     position: absolute;
     z-index: 1;
 }
-body{
-    font-family: "Playfair Display", serif;
-}
-
-.about{
-    width: 100vw;
-    /* height: 100vh; */
-}
-
-.personalSection{
-    display: flex;
-    flex-direction: row;
-    /* align-self: auto; */
-}
-
-.personalBlog{
-    width: 70%;
-    margin-left: 3em;
-    /* position: relative; */
-}
-.personalPhoto{
-    justify-content: center;
-    background-color: #F3EFEA;
-}
-.contact{
-    background-color: #F3EFEA;
-    border: 5px solid #333333;
-    margin-left: 2em;
-}
-.AP{
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 60%;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    /* border: 4px solid #be8f1f; */
-    margin: .5em 1em 0 1em;
-    opacity: .9;
-}
-
-.carousel-indicators{
-    visibility: hidden;
-}
-.glyphicon-chevron-right:before,
-.glyphicon-chevron-left:before{
-    background-color:grey;
-}
-.aboutpg1{
-    font-size: 1em;
-}
-.socialMedia{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    background-color: #F3EFEA;
-}
-
-.projects{
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-}
-
-.projDesc{
-    width: 80vh;
-}
-
-/* .GHView{
-    font-size: .75em;
-     */
-#p3GH{
-    background-color:white;
-} 
-
-
-i{
-    font-size: 2em;
-    padding-top: .3em;
-    background-color: #F3EFEA;
-    color: #333366;
-}
 
 #resBtn{
     color: white;
@@ -119,105 +156,29 @@ i{
     margin-bottom: 1em;
     font-size: .75em;
 }
-#resBtn:hover{
-    background-color: #333333;
-}
 
-#GH:hover, #IN:hover, #p3GH:hover{
-    color: black;
-}
-
-#GH:hover, #IN:hover, #resBtn:hover, #p3GH:hover{
-    transform: scale(1.1);
-}
-.hdrsec{
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-}
-.pjt, #fileshare, .learnMore{
-    display: flex;
-    justify-content: center;
-}
-
-
-#project3{
-    display: flex;
-    justify-content: center;
-}
 
 #hdr{
-    /* text-align: center; */
     border: 5px solid #333366;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 8px;
     padding: 0 10px 0 10px;
     background-color: #F3EFEA;
-    /* margin-top: 100px;    */
-}
-.nav{
-    margin: 2em;
-}
-
-.navLink{
-    display: flex;
-}
-
-.bannerImg{
-    width: 100vw;
-    height: 35vh;
-    object-fit: cover;
-    z-index: 0;
-    margin-top: 70px;
-    margin-bottom: 25px;
-}
-
-.grid-container, .btn-cont {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.grid-item, .btn-item {
-    padding-top: 10px;
-    background-color: #F3EFEA;
-    /* font-size: 25px; */
-    /* text-align: center; */
 }
 
 #GHRight, #resRight{
     text-align: right;
     padding-right: 15px;
 }
-#GHRight{
-    padding-right: 28px;
-}
-#IN{
-    padding-left: 15px;
-}
 
-.fileShare{
-    width: 600px;
-    height: 350px;
-}
-#fileshare{
+#fileShr{
     color:white;
     background-color: #333333;
-    /* text-align: center; */
+    text-align: center;
     font-size: 2em;
-    /* width: 50%;  */
-}
-.html{
-    border-bottom: 15px solid #F3EFEA !important;
-    width: 50px;
-    padding-left: .5em;
-    border: 1px solid grey;
 }
 
-.carouselContainer{
-    max-width: 50%;
-    height: auto;
-    vertical-align: middle;
-}
 /* -------------------------- */
 /* ------MEDIA QUERIES--------*/
 /* -------------------------- */
@@ -237,19 +198,11 @@ i{
 }
 
 @media screen and (max-width:780px) {
-    .personalSection{
-        /* display: flex; */
-        flex-direction: column;
-        /* text-align: center; */
-    }
-    .contact{
-        width: 70vw;
-    }
+    .personalSection{flex-direction: column;}
+    .contact{width: 70vw;}
     .personalBlog{
         width: 85%;
         margin: 0;
-        /* text-align: center; */
-        /* position: relative; */
     }
     .hello{
         font-size: 1.75em;
@@ -263,6 +216,5 @@ i{
     #name{
         margin-top: .5em;
         font-size: 1.5em;
-    }
-    
+    } 
 }
