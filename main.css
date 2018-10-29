@@ -25,6 +25,7 @@ i{
 .about{width: 100vw;}
 .carousel-indicators{visibility: hidden;}
 .carousel{height:max-content;}
+.carousel-inner {max-width:900px; max-height:600px !important;}
 .aboutpg1{font-size: 1.10em;}
 .nav{margin: 2em;}
 .navLink{display: flex;}
@@ -35,7 +36,11 @@ i{
     background-color:grey;
 }
 
-
+.carousel-inner > .item > img {
+    width:650px;
+    height:400px;
+    object-fit: contain;
+  }
 .bold{
     font-weight: bolder;
     text-decoration: underline;
@@ -140,6 +145,9 @@ i{
     margin: 1em;
 }
 
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+  }
 .pjt, .learnMore, .hdrsec{
     display: flex;
     justify-content: center;
@@ -313,4 +321,24 @@ i{
     #name{
         font-size: 1.25em;
     }
+}
+
+
+@media screen and (max-width:375px){
+    .AP{
+        width: 150px;
+        height: 150px;
+        padding-left: 1em;
+    }
+    #resBtn{
+        padding:none;
+        font-size: .5em;
+    }
+    .hello{
+        font-size: 2em;
+    }
+    .personalBlog, .projDesc{
+        width: 90vw;
+    }
+   
 }
