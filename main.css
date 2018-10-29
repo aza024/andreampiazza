@@ -3,6 +3,7 @@
 /* ------------------------------- */
 p{font-size:1em;}
 body{font-family: "Playfair Display", serif;}
+textarea{resize: none;}
 
 *{
     font-family: playfair display;
@@ -97,10 +98,7 @@ i{
     /* background-color: #F3EFEA; */
 }
 
-#project3{
-    display:flex;
-    /* flex-direction: column; */
-}
+
 .projects{
     display: flex;
     flex-direction: column;
@@ -165,6 +163,12 @@ i{
 #p3GH{background-color:white;} 
 #GHRight{padding-right: 28px;}
 #IN{padding-left: 15px;}
+#project3, #contactForm{display:flex;}
+
+#contactForm{
+    flex-direction: column;
+}
+
 
 #name{
     border: 5px solid #333366;

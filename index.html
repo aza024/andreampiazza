@@ -18,7 +18,7 @@
     <!-- Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <script src="main.js"></script> -->
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -31,7 +31,6 @@
             <img class = "bannerImg" src ="images/banner.png">
         </div>
     </header>
-  
 
     <div class = "about">
         <div class = "personalSection">
@@ -53,7 +52,41 @@
                     </div>
                     <div class ="btn-cont">
                             <div class = "btn-item" id="resRight">
-                                <button id = "resBtn"> Resumé</button>
+                                <div class="modalcontainer">
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="button" id="resBtn" data-toggle="modal" data-target="#myModal">Contact</button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">I'm looking forward to hearing from you!</h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form method="POST" id = "contactForm">
+                                                <input type="text" placeholder = "Name" name = "name">
+                                                <input type="email" placeholder = "Email" name = "reply_to">
+                                                <textarea rows="5" cols="50" name ="message" placeholder="Message"></textarea>
+                            
+                                                <button type = "submit">Send Message</button>
+
+                                                <p id="js-form-response"></p>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                             <div class = "btn-item">
                                 <a href = "#projects">
@@ -278,7 +311,7 @@
                 </p>
                 <p>
                     <span class = "bold"> Skills Used:</span>
-                    HTML, CSS, SASS, Python, Django, PostgreSQL, JavaScript, JQuery
+                    HTML, CSS, SASS, Python, Django, PostgreSQL, JavaScript, JQuery, AJAX
                 </p>
                 <div class = "learnMore">
                     <a href = "https://github.com/Cyrusluke925/petpals_app"><i id="p3GH" class="fab fa-github"></i></a>
@@ -341,7 +374,8 @@
             </div>
         </div>
     </div>
-
     </div>
+
+    <footer>FOOTER</footer>
 </body>
 </html>
