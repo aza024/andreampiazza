@@ -18,14 +18,14 @@
     <!-- Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class = "hdrsec">
             
-            <h1 id = "name">Andréa Piazza</h1>
+            <h1 id = "nameAP">Andréa Piazza</h1>
         </div>
         <div class = "banner">
             <img class = "bannerImg" src ="images/banner.png">
@@ -67,16 +67,16 @@
                                         </div>
 
                                         <div class="modal-body">
-                                            <form method="POST" id = "contactForm">
-                                                <input type="text" placeholder = "Name" name = "name">
-                                                <input type="email" placeholder = "Email" name = "reply_to">
-                                                <textarea rows="5" cols="50" name ="message" placeholder="Message"></textarea>
+                                            <form action="" id = "contactForm">
+                                                <input type="text" placeholder = "Name" name = "name" required>
+                                                <input type="email" placeholder = "Email" name = "email" required>
+                                                <textarea rows="5" cols="50" name ="message" placeholder="Message" required></textarea>
                             
-                                                <button type = "submit">Send Message</button>
+                                                <button id="btn">Send Message</button>
 
                                                 <p id="js-form-response"></p>
                                             </form>
-
+                                            <p class="success"></p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -97,6 +97,7 @@
                 </div>
             </div>
         </div>
+        
             <div class = "personalBlog">
                 <h1 class ="hello">
                     Hello! I'm Andréa!
@@ -376,6 +377,31 @@
     </div>
     </div>
 
-    <footer>FOOTER</footer>
+    <footer>
+        <div class="all">
+            <form action="" class="items">
+              <h1>Contact Us</h1>
+          
+                <div class="error-items">
+          <p style="color:red"  class="error"></p>
+          </div>
+          <div>
+              <label for="name">Name</label>
+              <input type="text"  id="nameform"  required  placeholder="Enter Your Name" class="name" />
+          </div>
+          
+          <div>
+              <label for="email">Email</label>
+          <input type="email"  required placeholder="Your Email" id="email"  class="normal" />
+          </div>
+          
+          <div class="area">
+          <label for="message" class="area-label">Message</label>
+          <textarea type="text" placeholder="Message" required id="message" class="txt"></textarea>
+          </div>
+          <button>Send</button>
+            </form>
+          </div>
+    </footer>
 </body>
 </html>

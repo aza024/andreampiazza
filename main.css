@@ -170,7 +170,7 @@ i{
 }
 
 
-#name{
+#nameAP{
     border: 5px solid #333366;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -276,7 +276,7 @@ i{
         height: 200px;
     }
 
-    #name{
+    #nameAP{
         margin-top: 2em;
         font-size: 1.5em;
     } 
@@ -322,7 +322,7 @@ i{
         height: 200px;
     }
     .bannerImg{height:20vh;}
-    #name{
+    #nameAP{
         font-size: 1.25em;
     }
 }
