@@ -1,57 +1,56 @@
-'use strict';
+const serverless = require("serverless-http");
+const AWS = require("aws-sdk");
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-const AWS = require('aws-sdk');
-const SES = new AWS.SES();
+const app = express();
 
-function sendEmail(formData, callback) {
+if (!AWS.config.region) {
+  AWS.config.update({
+    region: "us-east-1"
+  });
+}
+
+const ses = new AWS.SES();
+
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post("/", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+
   const emailParams = {
-    Source: process.env.EMAIL,
-    ReplyToAddresses: [formData.reply_to],
+    Source: process.env.EMAIL, // Your Verified Email
     Destination: {
-      ToAddresses: [process.env.EMAIL],
+      ToAddresses: [process.env.EMAIL] // Your verfied Email
     },
+    ReplyToAddresses: [req.body.email],
     Message: {
       Body: {
         Text: {
-          Charset: 'UTF-8',
-          Data: `${formData.message}\n\nName: ${formData.name}\nEmail: ${formData.reply_to}`,
-        },
+          Charset: "UTF-8",
+          Data: `${message}  from  ${req.body.email}`
+        }
       },
       Subject: {
-        Charset: 'UTF-8',
-        Data: 'New message from https://aza024.github.io',
-      },
-    },
+        Charset: "UTF-8",
+        Data: "You Received a Message from Andrea Piazza"
+      }
+    }
   };
 
-  SES.sendEmail(emailParams, callback);
-}
-
-module.exports.contactForm = (event, context, callback) => {
-  const formData = JSON.parse(event.body);
-
-  sendEmail(formData, function(err, data) {
-    const response = {
-      statusCode: err ? 500 : 200,
-      headers: {
-        "Access-Control-Allow-Origin": {
-          "type": "string"
-      },
-      "Access-Control-Allow-Methods": {
-          "type": "string"
-      },
-      "Access-Control-Allow-Headers": {
-          "type": "string"
-      },
-        'Content-Type': 'application/json',
-        // 'Access-Control-Allow-Origin': 'https://aza024.github.io',
-        'Access-Control-Allow-Headers': 'Origin',
-      },
-      body: JSON.stringify({
-        message: err ? err.message : data,
-      }),
-    };
-
-    callback(null, { statusCode: 400, body: JSON.stringify(error) });
+  ses.sendEmail(emailParams, (err, data) => {
+    if (err) {
+      res.status(402).send(`${err} ${err.stack}`);
+    }
+    if (data) {
+      res.send(data);
+    }
   });
-};
+});
+
+module.exports.form = serverless(app);

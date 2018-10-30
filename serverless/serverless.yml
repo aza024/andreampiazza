@@ -8,14 +8,12 @@ provider:
     - Effect: "Allow"
       Action:
         - "ses:SendEmail"
-      Resource: ["*"]
+      Resource: "*"
 
 functions:
   app:
-    handler: handler.app
+    handler: handler.form
     events:
-        - http: https://lhnkfl6hy1.execute-api.us-east-1.amazonaws.com/dev
-        - http: https://lhnkfl6hy1.execute-api.us-east-1.amazonaws.com/dev/{proxy+}
-          method: post
-          path: contact-form
-          cors: true
+        - http: process.env.AWS_ENDPOINT
+        - http: process.env.AWS_ENDPOINT/{proxy+}
+         
