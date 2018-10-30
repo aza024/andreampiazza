@@ -29,24 +29,32 @@ app.post("/", (req, res) => {
 
 
   const emailParams = {
-    Source: "apiazza023@gmail.com", // Your Verified Email
+    Source: "apiazza023@gmail.com", 
     Destination: {
-      ToAddresses: ["apiazza023@gmail.com"] // Your verfied Email
+      ToAddresses: ["apiazza023@gmail.com"] 
     },
     ReplyToAddresses: [req.body.email],
     Message: {
       Body: {
         Text: {
           Charset: "UTF-8",
-          Data: `${message}  from  ${req.body.email}`
+          Data: `${message} from ${req.body.email}`
         }
       },
       Subject: {
         Charset: "UTF-8",
-        Data: "Message from Andréa Piazza"
+        Data: "Message from AndréaPiazza.io"
       }
     }
   };
+  ses.sendEmail(emailParams, (err, data) => {
+    if (err) {
+      res.status(402).send(`${err} ${err.stack}`);
+    }
+    if (data) {
+      res.send(data);
+    }
+  });
 });
 
 module.exports.form = serverless(app);
