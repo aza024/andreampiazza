@@ -1,60 +1,57 @@
-const serverless = require("serverless-http");
-const AWS = require("aws-sdk");
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+'use strict';
 
-const app = express();
+const AWS = require('aws-sdk');
+const SES = new AWS.SES();
 
-if (!AWS.config.region) {
-  AWS.config.update({
-    region: "us-east-1" //example us-east-1
-  });
-}
-
-const ses = new AWS.SES();
-
-app.use(cors());
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
-app.use(bodyParser.json());
-
-app.post("/", (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-
-
+function sendEmail(formData, callback) {
   const emailParams = {
-    Source: "apiazza023@gmail.com", 
+    Source: process.env.EMAIL,
+    ReplyToAddresses: [formData.reply_to],
     Destination: {
-      ToAddresses: ["apiazza023@gmail.com"] 
+      ToAddresses: [process.env.EMAIL],
     },
-    ReplyToAddresses: [req.body.email],
     Message: {
       Body: {
         Text: {
-          Charset: "UTF-8",
-          Data: `${message} from ${req.body.email}`
-        }
+          Charset: 'UTF-8',
+          Data: `${formData.message}\n\nName: ${formData.name}\nEmail: ${formData.reply_to}`,
+        },
       },
       Subject: {
-        Charset: "UTF-8",
-        Data: "Message from AndréaPiazza.io"
-      }
-    }
+        Charset: 'UTF-8',
+        Data: 'New message from https://aza024.github.io',
+      },
+    },
   };
-  ses.sendEmail(emailParams, (err, data) => {
-    if (err) {
-      res.status(402).send(`${err} ${err.stack}`);
-    }
-    if (data) {
-      res.send(data);
-    }
-  });
-});
 
-module.exports.form = serverless(app);
+  SES.sendEmail(emailParams, callback);
+}
+
+module.exports.contactForm = (event, context, callback) => {
+  const formData = JSON.parse(event.body);
+
+  sendEmail(formData, function(err, data) {
+    const response = {
+      statusCode: err ? 500 : 200,
+      headers: {
+        "Access-Control-Allow-Origin": {
+          "type": "string"
+      },
+      "Access-Control-Allow-Methods": {
+          "type": "string"
+      },
+      "Access-Control-Allow-Headers": {
+          "type": "string"
+      },
+        'Content-Type': 'application/json',
+        // 'Access-Control-Allow-Origin': 'https://aza024.github.io',
+        'Access-Control-Allow-Headers': 'Origin',
+      },
+      body: JSON.stringify({
+        message: err ? err.message : data,
+      }),
+    };
+
+    callback(null, { statusCode: 400, body: JSON.stringify(error) });
+  });
+};

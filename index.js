@@ -1,6 +1,6 @@
-let name = document.getElementById("nameform");
+let name = document.getElementById("name");
 let email = document.querySelector("#email");
-let message = document.querySelector("#message");
+let message = document.querySelector("#reply_to");
 let error = document.querySelector(".error");
 let btn = document.querySelector("#btn");
 let success = document.querySelector(".success");
@@ -11,7 +11,7 @@ function submit(e) {
   e.preventDefault();
 
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://lhnkfl6hy1.execute-api.us-east-1.amazonaws.com/dev", true);
+  xhr.open("POST", process.env.AWS_ENDPOINT, true);
 
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function() {
