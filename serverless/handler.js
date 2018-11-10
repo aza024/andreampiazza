@@ -3,9 +3,12 @@ const AWS = require("aws-sdk");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const env = require('node-env-file');
+env(__dirname + '/.env');
 
+console.log("Starting app")
 const app = express();
-
+console.log("App Started")
 if (!AWS.config.region) {
   AWS.config.update({
     region: "us-east-1"
@@ -13,16 +16,20 @@ if (!AWS.config.region) {
 }
 
 const ses = new AWS.SES();
+console.log("ses Started")
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post("/", (req, res) => {
+app.post("/contact-form", (req, res) => {
+  console.log("Handling /")
+
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
 
+  console.log('process.env.EMAIL ' + process.env.EMAIL)
   const emailParams = {
     Source: process.env.EMAIL, // Your Verified Email
     Destination: {
@@ -42,12 +49,15 @@ app.post("/", (req, res) => {
       }
     }
   };
+  console.log("Sending Email Started")
 
   ses.sendEmail(emailParams, (err, data) => {
     if (err) {
+      console.log('error ' + err)
       res.status(402).send(`${err} ${err.stack}`);
     }
     if (data) {
+      console.log('email sent')
       res.send(data);
     }
   });
