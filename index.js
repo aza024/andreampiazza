@@ -11,7 +11,7 @@ function submit(e) {
   e.preventDefault();
 
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://lhnkfl6hy1.execute-api.us-east-1.amazonaws.com/dev", true);
+  xhr.open("POST", "https://lhnkfl6hy1.execute-api.us-east-1.amazonaws.com/dev/contact-form", true);
 
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function() {
@@ -28,8 +28,8 @@ function submit(e) {
     success.style.display = "block";
     success.innerHTML = "Thanks for submitting";
     document.querySelector(".all").style.display = "none";
-    xhr.send(JSON.stringify(data));
-
+    const res = xhr.send(JSON.stringify(data));
+    console.log(JSON.stringify(res))
   } else {
       error.style.display = "block";
       error.innerHTML = "Please Fill  All Details";
