@@ -8,6 +8,8 @@ https://aza024.github.io/andreampiazza
 
 -Javascript 
 
+-jQuery
+
 -AWS Lambda for contact form 
 
 ## Takeaways: 
