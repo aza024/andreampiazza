@@ -1,9 +1,13 @@
-# This repository contains the file that were used to build my personal website: 
+This repository contains the file that were used to build my personal website: 
+https://aza024.github.io/andreampiazza
 
 ## Technologies Used: 
 -HTML
+
 -CSS 
+
 -Javascript 
+
 -AWS Lambda for contact form 
 
 ## Takeaways: 
