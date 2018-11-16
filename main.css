@@ -30,7 +30,6 @@ i{
 .aboutpg1{font-size: 1.10em;}
 .nav{margin: 2em;}
 .navLink{display: flex;}
-/* .learnMore{flex-direction: space-between;} */
 .hdrsec{z-index: 10;}
 .glyphicon-chevron-right:before,
 .glyphicon-chevron-left:before{
@@ -41,7 +40,8 @@ i{
     width:650px;
     height:400px;
     object-fit: contain;
-  }
+}
+
 .bold{
     font-weight: bolder;
     text-decoration: underline;
@@ -71,12 +71,9 @@ i{
 
 .personalPhoto{
     justify-content: center;
-    /* background-color: #F3EFEA; */
 }
 
 .contact{
-    /* background-color: #F3EFEA; */
-    /* border: 5px solid #333333; */
     margin-left: 2em;
 }
 
@@ -96,7 +93,6 @@ i{
     flex-direction: column;
     justify-content:center;
 }
-
 
 .projects{
     display: flex;
