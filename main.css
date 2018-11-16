@@ -95,7 +95,6 @@ i{
     display: flex;
     flex-direction: column;
     justify-content:center;
-    /* background-color: #F3EFEA; */
 }
 
 
@@ -131,8 +130,6 @@ i{
 .grid-item, .btn-item {
     padding-top: 10px;
     font-size: 1.15em;
-    /* text-align: center; */
-    /* background-color: #F3EFEA; */
 }
 
 .carouselContainer{
@@ -145,15 +142,18 @@ i{
 
 .carousel-control.right, .carousel-control.left {
     background-image: none;
-  }
+}
+
 .pjt, .learnMore, .hdrsec{
     display: flex;
     justify-content: center;
 }
+
 .fullStack{
     font-size: .5em;
     flex-direction: column;
 }
+
 /* ------------------------------- */
 /* ------------- #IDS ------------ */
 /* ------------------------------- */
@@ -168,7 +168,6 @@ i{
 #contactForm{
     flex-direction: column;
 }
-
 
 #nameAP{
     border: 5px solid #333366;
@@ -195,7 +194,6 @@ i{
     text-transform: uppercase;
     letter-spacing: 8px;
     padding: 0 10px 0 10px;
-    /* background-color: #F3EFEA; */
 }
 
 #GHRight, #resRight{
@@ -228,8 +226,6 @@ i{
     }
 }
 
-
-
 @media screen and (max-width:780px) {
     .personalSection{flex-direction: column;}
     .grid-item, .btn-item{font-size: 1.5em; }
@@ -247,6 +243,7 @@ i{
         width: 100vw;
         height: 25vh; 
     }
+
     .contact{
         width: 70vw;
         margin-left: 5em;
@@ -256,9 +253,6 @@ i{
         display: flex;
         margin-bottom: 1em;
     }
-    /* .contact{
-        margin-bottom: 2em;
-    } */
 
     .personalBlog{
         width: 95%;
@@ -280,6 +274,7 @@ i{
         margin-top: 2em;
         font-size: 1.5em;
     } 
+
     #project3{
         display:flex;
         flex-direction: column;
