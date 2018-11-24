@@ -204,6 +204,14 @@ i{
     font-size: 2em;
 }
 
+footer{
+    background: black;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-size: 1.15em;
+}
+
 /* -------------------------- */
 /* ------MEDIA QUERIES--------*/
 /* -------------------------- */
